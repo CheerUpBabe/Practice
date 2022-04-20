@@ -1,0 +1,33 @@
+public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String idnumber ="";
+		String result="";
+		char g =' ';
+		
+		System.out.println("주민등록번호를 입력하세요. ex)879813-1488862");
+		idnumber=sc.nextLine();
+		g=idnumber.charAt(7);
+		
+		switch(g) {
+			case '1': case '3':
+				switch(g) {
+					case 1:
+						System.out.println("당신은 2000년 이전 출생 남자입니다.");
+						break;
+					case 3:
+						System.out.println("당신은 2000년 이후 출생 남자입니다.");
+				}
+				
+				break;
+				
+			case '2': case '4':
+				switch(g) {
+					case 2:
+						System.out.println("당신은 2000년 이전 출생 여자입니다.");
+						break;
+					case 4:
+						System.out.println("당신은 2000년 이후 출생 여자입니다.");
+				}
+			default:
+				System.out.println("유효하지 않는 주민번호입니다.");
+		}
