@@ -1,0 +1,24 @@
+public class Car {
+	String color;
+	String gearType;
+	int door;
+	
+	
+	Car(String color, String gearType, int door) {
+		this.color = color;
+		this.gearType = gearType;
+		this.door = door;
+	}
+	Car(String color){
+		this.door = 0;
+		//this(color, "auto", 2);        //제일앞이 아니라서 안됨.
+	}
+	
+	Car(){
+		this("white","auto",4);
+		//this.color = "white";
+		//this.door = 4;
+		//this.gearType = "Auto";
+	}
+	
+}
