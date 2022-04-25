@@ -1,0 +1,24 @@
+public class CallStackTest {
+
+	public static void main(String[] args) {
+		System.out.println("main시작");
+		firstMethod();
+		System.out.println("main끝");
+	}
+	
+	public static void firstMethod() {
+		System.out.println("first시작");
+		secondMethod();
+		System.out.println("first끝");
+	}
+	
+	public static void secondMethod() {
+		System.out.println("second시작");
+		System.out.println("secondMethod()");
+		System.out.println("second끝");
+	}
+}
+
+
+
+//작동순서 다시 돌아가면서 하는게 포인트
