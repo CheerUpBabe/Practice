@@ -1,0 +1,71 @@
+package hkit_0426;
+
+import java.util.Scanner;
+
+class Person{
+	//Field
+	 private String name;
+	 private String phNumber;
+	 private String birth ;
+	
+	//Constructor
+	Person(){}
+	
+	//Method
+	Scanner sc = new Scanner(System.in);
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setPhNumber(String phNumber) {
+		this.phNumber= phNumber;
+	}
+	
+	public String getPhNumber() {
+		return phNumber;
+	}
+	
+	public void setBirth(String birth) {
+		this.birth=birth;
+	}
+	
+	public String getBirth() {
+		return birth;
+	}
+	
+	public void getInformation() {
+		System.out.println("이름을 입력하세요.");
+		this.setName(sc.nextLine());
+		System.out.println("폰번호를 입력하세요 ex) 010-0000-0000");
+		this.setPhNumber(sc.nextLine());
+		System.out.println("생일을 입력하세요 ex) 0304");
+		this.setBirth(sc.nextLine());
+	}
+	
+	public void showPerson() {
+		System.out.println("이름 : " + this.name);
+		System.out.println("폰번호 : " + this.phNumber);
+		if(getBirth().length()==0) {
+			System.out.println();
+		} else if(getBirth().length()!=0) {
+			System.out.println("생일 : " + this.birth);
+		}
+	}
+}
+
+public class MakePerson {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Person p1 = new Person();
+		
+		p1.getInformation();
+		p1.showPerson();
+	}
+
+}
